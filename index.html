@@ -1,257 +1,324 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  </link>
-  <title>Tetris Project</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon City</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="city_wrapper">
+        <div class="moon_grid">
+            <div class="moon_hue"></div>
+            <div class="moon"></div>
+        </div>
+        
+        <div class="background_buildings_grid">
+            <div class="left_building">
+                <div class="roof_details">
+                    <div class="left_roof_rectangle_1"></div>
+                    <div class="left_roof_rectangle_2"></div>
+                    <div class="left_roof_hemisphere"></div>
+                    
+                </div>
+                <div class="rectangle_main">
+                    <div class="window_left_1 window_left_grid_position_1"></div>
+                    <div class="window_hue_1 window_left_grid_position_1"></div>
+                    <div class="window_devide_1 window_left_grid_position_1"></div>
 
-  <h3>Score:<span id="score">0</span></h3>
-  <button id="start-button">Start/Pause</button>
+                    <div class="window_left_2 window_left_grid_position_1"></div>
+                    <div class="window_hue_2 window_left_grid_position_1"></div>
+                    <div class="window_devide_2 window_left_grid_position_1"></div>
 
-  <div class="container">
-    <div class="grid">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-      <div class="taken"></div>
-    </div>
+                    <div class="window_left_3 window_left_grid_position_1"></div>
+                    <div class="window_hue_3 window_left_grid_position_1"></div>
+                    <div class="window_devide_3 window_left_grid_position_1"></div>
+
+                    <div class="window_left_4 window_left_grid_position_1"></div>
+                    <div class="window_hue_4 window_left_grid_position_1"></div>
+                    <div class="window_devide_4 window_left_grid_position_1"></div>
 
 
-    <div class="mini-grid">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+                </div>
+            </div>
+            <div class="center_building">
+                <div class="building_point">
+                    <div class="shapes_point">
+                        <div class="rectangle_top"></div>
+                        <div class="rectangle_left"></div>
+                        <div class="rectangle_right"></div>
+                    </div>
+                    <div class="rectangle_1"></div>
+                    <div class="rectangle_2"></div>
+                    <div class="rectangle_3"></div>
+                    <div class="rectangle_4"></div>
+                    <div class="rectangle_5"></div>
+                    <div class="rectangle_6"></div>
+                    <div class="rectangle_7"></div>
+                    <div class="rectangle_8"></div>
+                </div>
+                <div class="building_structure">
+                    <div class="center_building_rectangle">
+                        <h1>Neon City</h1>
+                        <div class="container">
+                            <div class="grid">
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                              <div class="taken"></div>
+                            </div>
+                        
+                        
+                           
+                        
+                        
+                          </div>
+                    </div>
+                    <div class="building_lights"></div>
+                </div>
+            </div>
+            <div class="right_building">
+                
+                <div class="right_building_top_triangle">
+                    <div class="light_decor_1"></div>
+                    <div class="light_hue_1"></div>
+                </div>
+                <div class="right_building_rectangle">
+                    <div class="light_decor"></div>
+                    <div class="light_hue"></div>
+                    <h3>Score:<span id="score">0</span></h3>
+                    <button id="start-button">Start/Pause</button>
+                    <div class="mini-grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                </div>
+                
+            </div>
 
-
-  </div>
-
-
-  <script src="script.js" charset="utf-8"></script>
+        </div>
+        </div>   
+    <script src="script.js" charset="utf-8"></script>
 </body>
-
 </html>

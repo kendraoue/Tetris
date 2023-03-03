@@ -1,36 +1,533 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --main-bg-buildings: #011d4f 50%,#09214c 64%,#0872c9 88%,#0046ea 100%;
+    --roof-colour: #011d4f;
+    --clr-neon: hsl(317 100% 54%);
+    --moon-colour: 
+        hsl(240deg 100% 20%) 0%,
+        hsl(350deg 50% 53%) 39%,
+        hsl(38deg 100% 82%) 100%;
+
+    --left--window-colour:
+        hsl(306deg 100% 60%) 0%,
+        hsl(303deg 93% 57%) 21%,
+        hsl(300deg 86% 55%) 30%,
+        hsl(297deg 88% 54%) 39%,
+        hsl(294deg 90% 54%) 46%,
+        hsl(291deg 92% 53%) 54%,
+        hsl(288deg 94% 53%) 61%,
+        hsl(284deg 96% 53%) 69%,
+        hsl(281deg 98% 54%) 79%,
+        hsl(277deg 100% 55%) 100%;
+
+}
+body{
+    background-color: #000001;
+}
+.moon_hue{
+     
+    position: absolute;
+    content: "";
+   
+    /* background: var(--clr-neon); */
+    /* top: 120%; */
+    /* left:0; */
+    /* width:100%;
+    height:100%; */
+
+    transform:translateX(-3.5rem);
+    filter: blur(1.5em);
+    opacity: 0.7;
+
+    width: 118rem;
+    height: 68rem;
+    background-image: linear-gradient(/*make this into a var*/
+        0deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(350deg 50% 53%) 39%,
+        hsl(38deg 100% 82%) 100%
+      );
+    box-shadow: 0 0 1em 0.5em var(--clr-neon);
+    border-radius: 70rem 70rem 0 0;
+}
+
+.moon{
+    position: absolute;
+    
+
+    width: 110rem;
+    height: 68rem;
+    background-image: linear-gradient(
+        0deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(350deg 50% 53%) 39%,
+        hsl(38deg 100% 82%) 100%
+      );
+    border-radius: 70rem 70rem 0 0; 
+}
+.background_buildings_grid{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: auto auto;
+    
+}
+
+/* LEFT BUILDING */
+.left_building{
+    justify-self: center;
+    align-self:flex-end;
+}
+.rectangle_main{
+    height: 45rem;
+    width: 30rem;
+    background: linear-gradient(to bottom, var(--main-bg-buildings));
+    justify-self: center;
+    align-items: baseline;
+}
+.roof_details{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+.left_roof_rectangle_1{
+    grid-row: 1;
+    grid-column: 1;
+    width: 20rem;
+    height: 1.5rem;
+    background-color: var(--roof-colour);
+
+    align-self: flex-end;
+    position: relative;
+}
+.left_roof_rectangle_2{
+    grid-row: 1;
+    grid-column: 2;
+    width: 5rem;
+    height: 2rem;
+    background-color: var(--roof-colour);; 
+
+    transform: translateX(2rem);
+}
+.left_roof_hemisphere{
+    grid-row: 2;
+    grid-column: 1;
+    width: 18rem;
+    height: 1.5rem;
+    border-radius: 250%;
+    background-color: var(--roof-colour);;
+    
+    position: absolute;
+    transform: translateX(3.5rem);
+
+}
+.rectangle_main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+}
+/* Window 1 */
+.window_left_grid_position_1{
+    grid-row: 1;
+    grid-column: 1;
+    
+}
+.window_hue_1{
+  
+    /* position: absolute; */
+    content: "";
+    width: 5rem;
+    height: 0.9rem;
+
+    box-shadow: 0 0 1em 0.5em var(--clr-neon);
+
+    /* filter: blur(1.5em); */
+    transform: translateX(5rem);
+    opacity: 0.7;
+    
+} 
+.window_left_1{
+    
+    position: absolute;
+    width: 5rem;
+    height: 0.8rem;
+    background-image: linear-gradient(
+        90deg, var(--left--window-colour));
+    transform: translateX(5rem);
+    
+}
+
+.window_devide_1{
+    
+    
+    /* position: absolute; */
+    width: 0.2rem;
+    height: 0.9rem;
+    background-color: navy;
+    transform: translateX(7rem);
+    
+    
+
+}
+/* Window 2 */
+.window_left_grid_position_2{
+    grid-row: 2;
+    grid-column: 1;
+}
+.window_hue_2{
+  
+    margin-top:5rem;
+    position: absolute;
+    content: "";
+    width: 3rem;
+    height: 0.9rem;
+
+    box-shadow: 0 0 1em 0.5em var(--clr-neon);
+
+    /* filter: blur(1.5em); */
+    transform: translateX(5rem);
+    opacity: 0.7;
+    
+} 
+.window_left_2{
+    
+    margin-top:5rem;
+    position: absolute;
+    width: 3rem;
+    height: 0.8rem;
+    background-image: linear-gradient(
+        90deg, var(--left--window-colour));
+    transform: translateX(5rem);
+    
+    
+}
+.window_devide_2{
+    
+    width: 0.2rem;
+    height: 0.9rem;
+    background-color: navy;
+    transform: translateX(7rem);
+
+}
+/* Window 3 */
+.window_hue_3{
+  
+    margin-top:10rem;
+    position: absolute;
+    content: "";
+    width: 3rem;
+    height: 0.9rem;
+
+    box-shadow: 0 0 1em 0.5em var(--clr-neon);
+
+    /* filter: blur(1.5em); */
+    transform: translateX(5rem);
+    opacity: 0.7;
+    
+} 
+.window_left_3{
+    
+    margin-top:10rem;
+    position: absolute;
+    width: 3rem;
+    height: 0.8rem;
+    background-image: linear-gradient(
+        90deg, var(--left--window-colour));
+    transform: translateX(5rem);
+    
+    
+}
+.window_devide_3{
+    
+    width: 0.2rem;
+    height: 0.9rem;
+    background-color: navy;
+    transform: translateX(7rem);
+
+}
+/* Window 4 */
+.window_hue_4{
+  
+    margin-top:15rem;
+    position: absolute;
+    content: "";
+    width: 3rem;
+    height: 0.9rem;
+
+    box-shadow: 0 0 1em 0.5em var(--clr-neon);
+
+    /* filter: blur(1.5em); */
+    transform: translateX(5rem);
+    opacity: 0.7;
+    
+} 
+.window_left_4{
+    
+    margin-top:15rem;
+    position: absolute;
+    width: 3rem;
+    height: 0.8rem;
+    background-image: linear-gradient(
+        90deg, var(--left--window-colour));
+    transform: translateX(5rem);
+    
+    
+}
+.window_devide_4{
+    
+    width: 0.2rem;
+    height: 0.9rem;
+    background-color: navy;
+    transform: translateX(7rem);
+
+}
+
+
+/* CENTER BUILDING  */
+.building_point{
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+}
+.building_structure{
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    
+}
+.center_building_rectangle{
+    height: 50rem;
+    width: 30rem;
+    background: linear-gradient(to bottom, var(--main-bg-buildings));
+    justify-self: center;
+}
+h1{
+    margin-left: 10rem;
+    font-family: 'Fira Sans', sans-serif;
+    color: #00FFFF;
+    
+}
+.container{
+    display: grid;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.shapes_point{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    justify-self: center;
+}
+.rectangle_top{
+    grid-column: 2;
+    position: absolute;
+    background-color: var(--roof-colour);;
+    width: 9rem;
+    height: 5rem;
+    grid-row: 2;
+    transform: translate(-4.5rem, -0.2rem);
+    
+}
+.rectangle_left{
+    grid-column: 1;
+    position: relative;
+    background-color: var(--roof-colour);
+    width: 5rem;
+    height: 10rem;
+    grid-row: 2;
+    transform: rotate(5deg);
+}
+.rectangle_right{
+    grid-column: 3;
+    position: relative;
+    background-color: var(--roof-colour);
+    width: 5rem;
+    height: 10rem;
+    grid-row: 2;
+    transform: rotate(-5deg);
+}
+
+
+/* Stacked rectangles */
+.rectangle_1{
+    grid-row: 3;
+    height: 10rem;
+    width: 10rem;
+    transform: translateY(5rem) rotate(45deg);
+   
+    background-color: var(--roof-colour);
+    justify-self: center;
+    position: relative;
+}
+.rectangle_2{
+    grid-row: 4;
+    height: 3rem;
+    width: 15rem;
+    background-color: var(--roof-colour);
+    justify-self: center;
+}
+.rectangle_3{
+    grid-row: 5;
+    height: 1rem;
+    width: 17rem;
+    background-color: var(--roof-colour);
+    justify-self: center;
+}
+.rectangle_4{
+    grid-row: 6;
+    height: 1rem;
+    width: 20rem;
+    background-color: var(--roof-colour);
+    justify-self: center;
+}
+.rectangle_5{
+    grid-row: 7;
+    height: 1rem;
+    width: 23rem;
+    background-color: var(--roof-colour);
+    justify-self: center;
+}
+.rectangle_6{
+    grid-row: 8;
+    height: 1rem;
+    width: 25rem;
+    background-color: var(--roof-colour);
+    justify-self: center;
+}
+.rectangle_7{
+    grid-row: 9;
+    height: 1rem;
+    width: 27.5rem;
+    background-color: var(--roof-colour);
+    justify-self: center;
+}
+
+/*RIGHT BUILDING*/
+
+.right_building{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    justify-self: center;
+    align-self: flex-end;
+
+}
+
+.right_building_rectangle{
+    grid-row: 2;
+
+    width: 40rem;
+    height: 30rem;
+    background: linear-gradient(to bottom, var(--main-bg-buildings));
+    
+    
+}
+.light_decor{
+    position: absolute;
+    transform: translateX(39rem);
+    width: .6rem;
+    height: 30rem;
+    background-color: #86ff70;
+}
+.light_hue{
+    position: absolute;
+    content: "";
+    transform: translateX(39rem);
+    width: .6rem;
+    height: 30rem;
+
+    box-shadow: 0 0 1em 0.5em #86ff70;
+    opacity: 0.7;
+}
+.right_building_top_triangle{
+    grid-row: 1;
+  
+    height: 10rem;
+    
+    width: 0;
+
+    border-style: solid;
+    border-width: 0 0 20rem 40rem;
+    border-color: transparent transparent var(--roof-colour) transparent;
+
+    /* background-color: var(--roof-colour); */
+
+    /* align-self: flex-end; */
+}
+.light_decor_1{
+    position: absolute;
+    /* transform: translateX(39rem); */
+    width: .6rem;
+    height: 20rem;
+    background-color: #86ff70;
+}
+.light_hue_1{
+    position: absolute;
+    content: "";
+    /* transform: translateX(39rem); */
+    width: .6rem;
+    height: 20rem;
+
+    box-shadow: 0 0 1em 0.5em #86ff70;
+    opacity: 0.7;
+}
+
+
+/* TETRIS CSS */
 .container {
-  display: flex;
-}
-
-
-.grid {
-  width: 200px;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: yellow;
-}
-
-.grid div {
-  height: 20px;
-  width: 20px;
-}
-
-.tetromino {
-  background-color: blue;
-}
-
-
-.mini-grid {
-  margin-left: 50px;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: yellow;
-}
-
-.mini-grid div {
-  height: 20px;
-  width: 20px;
-}
+    display: flex;
+  }
+  
+  
+  .grid {
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+  }
+  
+  .grid div {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .tetromino {
+    background-color: blue;
+  }
+  h3{
+    margin-left: 3.2rem;
+    color: white;
+  }
+  #score{
+    color: red;
+  }
+  
+  #start-button{
+    
+    margin-left: 3.2rem;
+    margin-bottom: 1rem;
+  }
+  .mini-grid {
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+   
+  }
+  
+  .mini-grid div {
+    height: 20px;
+    width: 20px;
+  }
+  
